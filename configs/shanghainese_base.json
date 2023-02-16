@@ -7,7 +7,7 @@
     "learning_rate": 2e-4,
     "betas": [0.8, 0.99],
     "eps": 1e-9,
-    "batch_size": 64,
+    "batch_size": 32,
     "fp16_run": true,
     "lr_decay": 0.999875,
     "segment_size": 8192,
@@ -17,9 +17,9 @@
     "c_kl": 1.0
   },
   "data": {
-    "training_files":"filelists/vctk_audio_sid_text_train_filelist.txt.cleaned",
-    "validation_files":"filelists/vctk_audio_sid_text_val_filelist.txt.cleaned",
-    "text_cleaners":["english_cleaners2"],
+    "training_files":"filelists/zaonhe_train_filelist.txt.cleaned",
+    "validation_files":"filelists/zaonhe_val_filelist.txt.cleaned",
+    "text_cleaners":["shanghainese_cleaners"],
     "max_wav_value": 32768.0,
     "sampling_rate": 22050,
     "filter_length": 1024,
@@ -29,7 +29,7 @@
     "mel_fmin": 0.0,
     "mel_fmax": null,
     "add_blank": true,
-    "n_speakers": 109,
+    "n_speakers": 2,
     "cleaned_text": true
   },
   "model": {
@@ -49,5 +49,7 @@
     "n_layers_q": 3,
     "use_spectral_norm": false,
     "gin_channels": 256
-  }
+  },
+  "speakers": ["1", "2"],
+  "symbols": ["_", ",", ".", "!", "?", "\u2026", "a", "b", "d", "f", "g", "h", "i", "k", "l", "m", "n", "o", "p", "s", "t", "u", "v", "y", "z", "\u00f8", "\u014b", "\u0235", "\u0251", "\u0254", "\u0255", "\u0259", "\u0264", "\u0266", "\u026a", "\u027f", "\u0291", "\u0294", "\u02b0", "\u0303", "\u0329", "\u1d00", "\u1d07", "1", "5", "6", "7", "8", " "]
 }
